@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script type="text/javascript">
+    var name = "HiddenOne"
+    function ShowHidden(){
+      document.getElementById(name).style.marginTop = "20px";
+      document.getElementById(name).style.display = "block";
+      if(name == "HiddenTwo"){
+        document.getElementById("itemThrX").style.display = "block";
+        document.getElementById("AddItem").style.display = "none";
+      }
+      if(name == "HiddenOne"){
+        document.getElementById("itemTwoX").style.display = "block";
+        name = "HiddenTwo";
+      }
+    }
+
+    /*allow user to input card some coloumn*/
+    function SelectVisa() {
+      document.getElementById("alipay").style.display = "none";  
+      document.getElementById("CredCard").style.display = "block";   
+      document.getElementById("uploadInvoice").required = false;  
+      document.getElementById("CardNo").required = true;  
+      document.getElementById("expiryTime").required = true;  
+      document.getElementById("SecurCode").required = true;        
+    }
+    /*"cash" is selected, Card number can not input anything again*/
+    function SelectAlipay() {
+      document.getElementById("CredCard").style.display = "none";    
+      document.getElementById("alipay").style.display = "inline";  
+      document.getElementById("uploadInvoice").required = true;  
+      document.getElementById("CardNo").required = false;  
+      document.getElementById("expiryTime").required = false;  
+      document.getElementById("SecurCode").required = false;  
+    }
+
+    // price display and calculation
+    var shoppingFee = 50;
+    function returnItemPrice(){
+      var totalAmount = 0;
+      if(document.getElementById('inputProductOne').value != "")
+        totalAmount += outputItemPrice('inputProductOne',document.getElementById('qtyOne').value,'itemOne');
+      if(document.getElementById('inputProductTwo').value != "")
+        totalAmount += outputItemPrice('inputProductTwo',document.getElementById('qtyTwo').value,'itemTwo');
+      if(document.getElementById('inputProductTr').value != "")
+         totalAmount += outputItemPrice('inputProductTr',document.getElementById('qtyTr').value,'itemTr');
+      if(totalAmount>=500){
+        document.getElementById('shippingFee').innerHTML = " "+0;
+        shoppingFee = 0
+      }
+      else if(totalAmount<500) document.getElementById('shippingFee').innerHTML =  shoppingFee = 50;
+      document.getElementById('output').innerHTML = totalAmount+shoppingFee;
+    }
+
+    function outputItemPrice(ID,qty,item){
+      var val = document.getElementById(ID).value;
+      if(val == "Episode 4-7 English Subbed DVD(HKD $150)")
+        return qty*150;
+      else if(val == "Episode 8-13 English Subbed DVD(HKD $200)")
+        return qty*200;
+      else if(val == "Sword Art Online Progressive DVD(HKD $500)")
+        return qty*500;
+      else if(val == "Stand by me 1 + Stand by me 2 DVD(HKD $300)")
+        return qty*300;
+    }
+
+    function getItemPrice(ID,qty,item){
+        document.getElementById(item).innerHTML = '$' + outputItemPrice(ID,qty,item);
+        returnItemPrice();
+    }
+
+  </script>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/FormStyle.css">
+  <title>Shopping Form</title>
+</head>
+
+<body onload="document.form.name.focus()">
+  <div class="form-style">
+    <!--form content-->
+
+      <div class="full-container">
+        <h1>Shopping Form</h1>
+        <div style="text-align: right;font-size:10px;">Provided by Anime Fans Club</div>
+        <div style="text-align: left;">
+          <star class="red" style="margin-top: 120px;">*</star> Must fill
+        </div>
+      </div>
+
+      <form name="form" action="submitFrom-success.html" method="POST">
+
+        <div class="detail">
+          Name<star class="red">*</star>:
+          <input type="text" id="name" pattern="[0-9A-Za-z]{3,}" title="3 char(number and letter) at least" required />
+        </div>
+
+
+        <div class="detail">Email<star class="red">*</star>:
+          <input type="email" id="email" required/>
+        </div>
+
+
+        <div class="detail">
+          Phone:
+          <input type="tel" id="phone" name="phone" placeholder="HK phone number" pattern="[0-9]{8}" title="XXXXXXXX(eight number)">
+        </div>
+
+        <div class="column">
+          Shipping Address:
+          <br><textarea name="" id="" cols="59" rows="5" style="resize: none;" required></textarea><br><br>
+
+          Product:
+          <input list="product" id="inputProductOne"  class="inputProduct" onchange="getItemPrice('inputProductOne',document.getElementById('qtyOne').value,'itemOne')" >
+          <datalist id="productOne">
+            <option>Episode 4-7 English Subbed DVD(HKD $150)</option>
+            <option>Episode 8-13 English Subbed DVD(HKD $200)</option>
+            <option>Sword Art Online Progressive DVD(HKD $500)</option>
+            <option>Stand by me 1 + Stand by me 2 DVD(HKD $300)</option>
+            </datalist>
+            Quantity:
+            <input id="qtyOne" type="number" name="time" value="1" min="1" max="5" onchange="getItemPrice('inputProductOne',document.getElementById('qtyOne').value,'itemOne')" style="width: 3em"; />
+            <a id="HiddenOne" style="display: none;">
+                Product:
+                <input list="product" id="inputProductTwo" class="inputProduct" onchange="getItemPrice('inputProductTwo',document.getElementById('qtyTwo').value,'itemTwo')">
+                <datalist id="productTwo">
+                  <option>Episode 4-7 English Subbed DVD(HKD $150)</option>
+                  <option>Episode 8-13 English Subbed DVD(HKD $200)</option>
+                  <option>Sword Art Online Progressive DVD(HKD $500)</option>
+                  <option>Stand by me 1 + Stand by me 2 DVD(HKD $300)</option>
+                </datalist>
+                Quantity:
+                  <input id="qtyTwo" type="number" name="time" value="1" min="1" max="5" style="width: 3em"; onchange="getItemPrice('inputProductTwo',document.getElementById('qtyTwo').value,'itemTwo')"/>
+              </a>
+
+            <a class="HiddenTwo" id="HiddenTwo" style="display: none;">
+                Product:
+                <input list="product" id="inputProductTr" class="inputProduct" onchange="getItemPrice('inputProductTr',document.getElementById('qtyTr').value,'itemTr')">
+                <datalist id="product">
+                  <option>Episode 4-7 English Subbed DVD(HKD $150)</option>
+                  <option>Episode 8-13 English Subbed DVD(HKD $200)</option>
+                  <option>Sword Art Online Progressive DVD(HKD $500)</option>
+                  <option>Stand by me 1 + Stand by me 2 DVD(HKD $300)</option>
+                </datalist>
+                Quantity:
+                  <input id="qtyTr" type="number" name="time" value="1" min="1" max="5" style="width: 3em"; onchange="getItemPrice('inputProductTr',document.getElementById('qtyTr').value,'itemTr')"/>
+            </a>
+            <div onclick="ShowHidden()" id="AddItem">+Add product item</div>
+            <div class="calculAmount">
+              <br>Product item <span id="itemOne">$0</span><br>
+              <div id="itemTwoX" style="display: none;"><span id="itemTwo">$0</span></div>
+              <div id="itemThrX" style="display:none;"><span id="itemTr" >$0</span> </div>
+              + Shipping Fee $<span id="shippingFee">50</span><br>
+            ------------------------- <br>
+              Total amount:
+              HKD $<span id="output">0</span>
+            </div>
+          
+        <br>
+        Payment Method<star class="red">*</star>:
+        <input type="radio" name="Payment" value="cash" checked="checked" onchange="SelectAlipay();" /> Alipay
+        <input type="radio" name="Payment" value="visa" onchange="SelectVisa();" /> Visa
+
+        <div id="alipay">
+          <div><br>Please scan the QR code below to pay and upload the invoice later:</div>
+          <img id="aliCode" src="./picture/AlipayCode.webp" style="width: 300px;height: auto;">
+          <div>Invoice upload:
+            <input type="file" id="uploadInvoice" name="uploadInvoice" accept="image/*" required >
+          </div>
+        </div>
+
+        <div id="CredCard" style="display: none;">
+          <br>Card number<star class="red">*</star>:
+          <input type="text" id="CardNo" style="width:380px;"pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" title="XXXX-XXXX-XXXX-XXXX(number)" />
+          <br><br>Expiry date<star class="red">*</star>:
+          <input type="month" id="expiryTime" style="width:200px;" min="2022-05"/>
+          Security code<star class="red">*</star>:
+          <input type="text" id="SecurCode" style="width:70px;" pattern="[0-9]{3}" title="XXX(number)"/>
+        </div>
+      </div>
+
+        <br><input type="checkbox" id="check" style="margin-bottom:20px" required>I have read and acknowledged the privacy policy<br>
+        
+        <input class="button" id="sumitForm" type="submit" value="Submit" />
+
+      </form>
+    </div>
+</body>
+
+</html>

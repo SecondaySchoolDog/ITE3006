@@ -1,0 +1,629 @@
+/* body frame setting */
+body{
+	max-width: 1080px; 
+	margin: 0 auto !important; 
+	float: none !important;
+	background-color: rgb(239, 245, 248);
+}
+/* format setting */
+.bodyContent{
+	background-color: white;
+}
+
+/* logo picture setting */
+#logo{	
+	width: 120px;
+	height: 120px;
+}
+
+/* red line */
+.header {
+	width: 100%;
+	height: 100%;
+	border-top: 15px solid blue;
+	position: relative;
+	top: -4px;
+}
+
+/* main menu setting*/
+.MainMenu{
+	margin-bottom: -2px;
+}
+
+ul.MainMenu ul {
+	border: #ccc 1px solid;
+	position: absolute;
+	top: 100%;
+}
+
+ul.MainMenu ul li {
+	border-bottom: #ccc 1px solid;
+}
+
+ul.MainMenu ul li:last-child {
+	border-bottom: none;
+}
+ul.MainMenu ul { 
+	display: none;
+}
+
+ul.MainMenu li:hover > ul { 
+	z-index: 3;
+	display: block;
+}
+
+ul { 
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* menu font setting */
+ul.MainMenu {
+	display: inline-block;
+	font-family: 'Open Sans', Microsoft YaHei, sans-serif;
+	font-size: 13px;
+}
+
+ul.MainMenu li {
+	position: relative;
+	white-space: nowrap;
+	border-right: #ccc 1px solid;
+}
+
+ul.MainMenu > li {
+	float: left;
+}
+
+/* menu style */
+ul.MainMenu a {
+	background-color: rgb(174, 174, 240);
+	display: block;
+	padding: 0 30px;
+	text-decoration: none;
+	line-height: 40px;
+}   
+
+/* menu button hover */
+ul.MainMenu li:hover > a { 
+	background-color: rgb(70, 70, 128);
+	color: white;
+}
+
+/* menu end*/
+
+/* second menu start */
+.SecondMenu h2{
+	margin-top:-24px;
+	margin-left: 40px;
+	font-size: 22px;
+
+}
+
+.SecondMenu {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgb(74, 74, 176);
+	transition: 0.8s;
+	padding-top: 75px;
+	z-index: 3;
+	overflow-x: hidden;/* keep the font position */
+	white-space: nowrap;
+    text-overflow: clip;
+  }
+  
+  .SecondMenu a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 28px;
+	color: white;
+	display: block;
+  }
+  
+  .SecondMenu a:hover {
+	color: blue;
+  }
+  
+  .SecondMenu .closebtn {
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	font-size: 45px;
+  }
+  
+  .openbtn {
+	font-size: 25px;
+	cursor: pointer;
+	background-color: #111;
+	color: white;
+	padding: 10px 15px;
+	border: none;
+  }
+  
+  .openMenubtn:hover {
+	background-color: #444;
+  }
+  
+  #SecondMenuBtn {
+	transition: margin-left .8s;
+	padding: 10px;
+  }
+  
+  .SecondMenu .HiddenMenu{
+	  font-size: 15px;
+	  margin-left:  30px;
+  }
+
+  #HiddenMenu{
+	  display: none;
+  }
+  
+  .openbtn{
+	  display:none;
+  }
+/* cancel the button auto setting */
+  button a{
+	color:white;
+	text-decoration: none;
+}
+/* SecondMenu setting end */
+
+/* facebook icon setting 		 */
+.ContactIcon{		
+	position: relative;
+	top:-35px;
+	left: 220px;
+}
+
+.EmailIcon{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+
+.promotionLeft{
+	position: fixed;
+	left:0;
+	top: 250px;
+}
+
+.promotionLeft img{
+	width: 300px;
+}
+
+
+/* footer setting  */
+footer {	
+	width:1080px;
+    height: 80px;
+    background: rgb(130, 141, 235);
+	text-align: center;
+	line-height: 40px;
+}
+
+
+/* index page setting start*/
+
+/* Slideshow setting  */
+.Slideshow{
+	margin-top: -4px;
+}
+
+.dot {
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: .1} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 10px}
+}
+
+@media only screen and (max-width: 880px){
+	img, .dot, .menuContent{
+		display: none;
+	}
+
+	.animeContent img{
+		display:flex;
+	}
+
+	body{
+		background-color: white;
+		font-size: 12px;
+	}
+
+	.bodyContent .newsArea{
+		width: 100%;
+	}
+
+	.openbtn{
+		display:inline;
+	}
+}
+
+
+.bodyContent .animeNewsTopic{
+	display:flex;
+	margin-left: 50px;
+}
+
+.bodyContent .animeNewsTopic h1{
+	margin-top: 40px;
+}
+
+.bodyContent .newsArea img{ 
+	width:400px;
+	height:300px;
+}
+
+.bodyContent .newsArea .container__text{ 
+	margin-left: 30px;
+}
+
+.newsArea {
+	margin: 20px 50px 50px;
+	border: 1px solid black;
+	padding: 30px 40px 30px;
+	width: 900px;
+	display: flex;
+}
+
+.bodyContent .newsArea button{
+	margin-top: 30px;
+	margin-left: 150px;
+	align-items: center;
+	display: inline-block;
+	padding: 15px 100px;
+	font-size: 24px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	background-color: rgb(126, 126, 250);
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+}
+
+.bodyContent .newsArea button:hover{background-color: #466fe0}
+
+.bodyContent .newsArea button:active {
+	background-color: blue;
+	box-shadow: 0 5px rgb(184, 106, 106);
+	transform: translateY(3px);
+}
+
+/* hover the picture event */
+.bodyContent img {
+	transition: transform 0.25s ease;
+  }
+  
+.bodyContent .newsArea img:hover {
+	-webkit-transform: scale(1.8);
+	transform: scale(2);
+  }
+
+
+  /* see more function UI */
+#seemore{
+	margin-left: 50px;
+	font-size: 20px;
+	color: rgb(202, 202, 250);
+	text-decoration:underline;
+	cursor: pointer;
+}
+
+#seemore:hover{
+	color: blue;
+}
+
+.hideContent {
+    overflow: hidden;
+    line-height: 1em;
+    height: 2em;
+}
+
+.showContent {
+    line-height: 1em;
+    height: auto;
+}
+
+#HiddenContent {display: none;}
+
+/* anime page */
+.animeContent{
+	margin-left: 250px;
+	margin-top: 20px;
+	display: flex;
+}
+
+.animeContent p{
+	margin-left: 20px;
+}
+
+.generalContent{
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.line{
+	width: 100%;
+	height: 100%;
+	border-top: 1px solid black;
+	position: relative;
+}
+
+/* video checker */
+VideoList{
+	display: flex;
+}
+
+VideoList h2{
+	font-size: 50px;
+}
+
+VideoList img{
+	width:auto;
+	height:50px;
+	margin-top: 50px;
+	margin-left: 10px;
+}
+
+.PlayButton {
+	background-color: white;
+	border: 3px solid red;
+	border-radius: 5px;
+	color: black;
+	text-align: center;
+	display: inline;
+	font-size: 20px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	width: 250px;
+	margin-top: 5px;
+  }
+  
+  .PlayButton:hover {
+	background-color: red;
+	color: white;
+  }
+
+   video{
+	  display: none;
+  }
+
+  @media only screen and (max-width: 830px) {
+	.animeContent{
+		position:relative;
+		right: 150px;
+	}
+  }
+
+
+ /* comment area UI  */
+commentTopic{
+	display: flex;
+}
+
+.commentTopic{
+	margin-top: 20px;
+	margin-left: 30px;
+}
+
+commentTopic h2{
+	font-size: 30px;
+	margin-left: 20px;
+}
+
+commentTopic h2 date{
+	font-size: 15px;
+}
+
+commentTopic img{
+	width:auto;
+	height:80px;
+}
+
+.comment h5{
+	margin-left: 180px;
+}
+
+.submitComment{
+	background-color: black;
+	border-radius: 12px;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	display: inline-block;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.submitComment:hover {
+	background-color: red;
+  }
+
+/* shopping page */
+
+#shopping td:hover {background-color: #ddd;}
+
+#shopping th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: wh
+}
+  #shopping th, #shopping td{
+	border: 1px solid #ddd;
+  }
+
+#shopping th {
+	text-align: center;
+	background-color: #7280d0;
+	color: white;
+  }
+
+.GetShopping{
+	text-align: center;
+	margin:20px auto;
+}
+
+.ShippingButton{
+	background-color: rgb(153, 146, 233);
+	border-radius: 12px;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	display: inline-block;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.ShippingButton:hover {
+	background-color: blue;
+  }
+
+/* sumbit form-success page */
+#tick {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 25%;
+	height: 25%;
+}
+
+textTwo {
+	font-size: 40px;
+	font-style: italic;
+	margin-left: 130px;
+}
+
+/* browse news page */
+.newContent{
+	width:70%;
+	display: block;
+}
+
+.link-right {
+	margin-top: 20px;
+	width: 60%;
+	height: 80%;
+	border-right: solid #ACC0D8 1px;
+}
+
+.newsList{
+	width: 380px;
+	left: 60%;
+	right: 40%;
+	top: 190px;
+	position:absolute;
+}
+
+@media only screen and (max-width: 1200px) {
+	list{display: none;}
+	.link-right {
+		border-right: solid white 0px;
+	}
+}
+
+.ListTopic{
+	cursor: pointer;
+	color: blue;
+	text-decoration: underline;
+}
+
+.tiledBackground{
+	width: 100%;
+	height: 100%;
+	display: block;
+	margin-top: -4px;
+	min-width: 1000px;
+	min-height: auto;
+}
+
+@media only screen and (max-width: 600px){
+	.contactUsFrame{
+		position: block;
+	}
+}
+
+.contactUsFrame{
+	position: absolute;
+	top: 180px;
+	left: -150px;
+	margin-left: 50%;
+	margin-right: 50%;
+	padding: 140px;
+	background-color: white;
+	max-width: 150px;
+	max-height: 150px;
+}
+
+
+.contactUsFrame h2{
+	position: absolute;
+	top: -10px;
+	left: 9px;
+	text-align: center;
+	display: block;
+	
+}
+
+.contactUsFrame #ContactUsTextarea{
+	position: absolute;
+	top: 50px;
+	left: 11px;
+}
+
+.contactUsFrame button{
+	position: absolute;
+	top: 220px;
+	left: 11px;
+	z-index: 1;
+}
+
+@media only screen and (max-width: 850px){
+	.tiledBackground{
+		height:500px;
+		width: auto;
+	}
+}
+
+.ClickToTop{
+	position: fixed;
+	right: 10px;
+	width: 120px;
+}
+
+@media only screen and (max-width: 1200px) {
+	.ClickToTop {display: none;}
+  }
+

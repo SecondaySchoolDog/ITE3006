@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bodyContent">
+    <a href="#">
+        <id="logo"><img src="./picture/logo.png" />
+    </a>
+    
+    <ul class="MainMenu">
+        <li class="menuContent"><a href="index.html">Home</a></li>
+        <li class="menuContent"><a href="#">Anime</a>
+            <ul>
+                <li><a href="AnimeDoraemon.html">Doraemon</a></li>
+                <li><a href="AnimeSAO.html">Sword Art Online</a></li>
+                <li><a href="#">Fullmetal Alchemist Father</a></li>
+                <li><a href="#">Attack On Iitan</a></li>
+                <li><a href="#">Hunter X Hunter</a></li>
+            </ul>
+        </li>
+        <li class="menuContent"><a href="Shopping.html">Shopping</a></li>
+        <li class="menuContent"><a href="History.html">History</a></li>
+        <li class="menuContent"><a href="Contact.html">Contact Us</a></li>
+    </ul>
+    
+    <a class="ContactIcon" href="http://www.facebook.com" target="_blank"><img src="./picture/FacebookContactUs.png" style="width:150px;height: auto;"></a>
+    <div class="header"></div>
+
+    <a class="EmailIcon" href="mailto:210339322@stu.vtc.edu.hk"><img src="./picture/Email.png" style="width:80px;height:auto;"></a>
+    <a class="promotionLeft" href="https://en.wikipedia.org/wiki/Sword_Art_Online" target="_blank"><img src="./picture/promotionListLeft.jpg" style="width:180px;height:auto;"></a>
+
+    <!-- content setting  -->
+    
+    <form name="form" class="FirstForm" action="submitFrom-success.html" method="POST">
+      <img class="tiledBackground" src="./picture/contactUs.jpg">
+        <div class="contactUsFrame">
+            <h2>Contact</h2>
+            <textarea class"ContactUsTextarea" name="" id="ContactUsTextarea" cols="30" rows="10" title="value" style="resize: none;">You can type something here to contact us...</textarea>
+                        <button class="ShippingButton" style="width: 260px;"><a href="Contact.html">Send</a></button>
+        </div>
+    </form>
+    <!-- content setting end -->
+    
+
+    <footer>
+      &copy; 2022-2023, Anime Fans Club<br>
+      All rights reserved.
+    </footer>
+
+    <script> 
+    function openVideo(name){
+      var AllVideo = document.getElementsByClassName("animeVideo");
+      for(var i = 0; i < AllVideo.length; i++){
+        AllVideo[i].pause();
+        AllVideo[i].currentTime = 0;
+        AllVideo[i].load();
+        AllVideo[i].style.display = "none"; 
+      }
+      document.getElementsByClassName(name)[0].style.display = "inline";
+    }
+    // second menu setting
+    var IsContentHidden = false;
+    function openHiddenMenu(){
+      var divsToHide = document.getElementsByClassName("HiddenMenu");
+        if(IsContentHidden == false){
+          for(var i = 0; i < divsToHide.length; i++)
+              divsToHide[i].style.display = "block"; 
+              IsContentHidden = true;
+        }else{
+          for(var i = 0; i < divsToHide.length; i++)
+              divsToHide[i].style.display = "none"; 
+              IsContentHidden = false;
+        }
+    }
+    
+    // second menu setting 
+    var IsContentHidden = false;
+    function openHiddenMenu(){
+      var divsToHide = document.getElementsByClassName("HiddenMenu");
+        if(IsContentHidden == false){
+          for(var i = 0; i < divsToHide.length; i++)
+              divsToHide[i].style.display = "block"; 
+              IsContentHidden = true;
+        }else{
+          for(var i = 0; i < divsToHide.length; i++)
+              divsToHide[i].style.display = "none"; 
+              IsContentHidden = false;
+        }
+    }
+
+    function OpenMenu() {
+      document.getElementById("SecondMenu").style.width = "300px";
+      document.body.style.backgroundColor = "gray";
+    }
+
+    function CloseMenu() {
+      document.getElementById("SecondMenu").style.width = "0";
+      document.body.style.backgroundColor = "white";
+    }
+  </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Anime Fans Club</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="bodyContent">
+        <a href="#">
+            <id="logo"><img src="./picture/logo.png" />
+        </a>
+        
+        <ul class="MainMenu">
+          <li class="menuContent"><a href="index.html">Home</a></li>
+          <li class="menuContent"><a href="#">Anime</a>
+              <ul>
+                  <li><a href="AnimeDoraemon.html">Doraemon</a></li>
+                  <li><a href="AnimeSAO.html">Sword Art Online</a></li>
+                  <li><a href="#">Fullmetal Alchemist Father</a></li>
+                  <li><a href="#">Attack On Iitan</a></li>
+                  <li><a href="#">Hunter X Hunter</a></li>
+              </ul>
+          </li>
+          <li class="menuContent"><a href="Shopping.html">Shopping</a></li>
+          <li class="menuContent"><a href="History.html">History</a></li>
+          <li class="menuContent"><a href="Contact.html">Contact Us</a></li>
+      </ul>
+        
+        <a class="ContactIcon" href="http://www.facebook.com" target="_blank"><img src="./picture/FacebookContactUs.png" style="width:150px;height: auto;"></a>
+          
+        <div class="header"></div>            
+        <div class="Slideshow">
+            <div class="fade">
+              <a href="AnimeSAO.html"><img src="./picture/Sword.jpg" style="width:100%;height: 500px ;"></a>
+            </div>
+
+            <div class="fade">
+              <a href="AnimeDoraemon.html"><img src="./picture/DoraemomSli.jpg" style="width:100%;height: 500px ;"></a>
+            </div>
+            
+            <div class="fade">
+              <img src="./picture/AttackOnTitan.jpg" style="width:100%;height: 500px;">
+            </div>
+
+            <div class="fade">
+              <img src="./picture/hunter.webp" style="width:100%;height: 500px;">
+            </div>
+            
+        </div>
+
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>  
+        
+        <div id="SecondMenu" class="SecondMenu">
+          <h2>Anime Fans Club</h2>
+          <a href="javascript:void(0)" class="closebtn" onclick="CloseMenu()">x</a>
+          <a href="index.html">Home</a>
+          <a href="#" onclick="openHiddenMenu()" >Anime</a>
+          <a href="AnimeDoraemon.html" class="HiddenMenu" id="HiddenMenu">-Doraemon</a>
+          <a href="AnimeSAO.html" class="HiddenMenu" id="HiddenMenu">-Sword Art Online</a>
+          <a href="#" class="HiddenMenu" id="HiddenMenu">-Fullmetal Alchemist Father</a>
+          <a href="#" class="HiddenMenu" id="HiddenMenu">-Attack On Iitan</a>
+          <a href="#" class="HiddenMenu" id="HiddenMenu">-Hunter X Hunter</a>
+          <a href="Shopping.html">Shopping</a>
+          <a href="History.html">History</a>
+          <a href="Contact.html">Contact</a>
+        </div>
+        
+        <div id="SecondMenuBtn">
+          <button class="openbtn" onclick="OpenMenu()">Open Menu</button>  
+        </div>
+
+        <div class="animeNewsTopic">
+          <img src="./picture/animeIcon.png" style="width:auto;height: 100px;">
+          <h1>Anime News</h1>
+        </div>       
+
+        <div class="newsArea">
+          <img class="container__image" src="./picture/Ultraman.jpg">
+          <div class="container__text">
+            <h2>Ultraman Anime Season 2 Streams Opening Animation Sequence</h2>
+            <p>Netflix and Tsuburaya Productions posted the opening animation sequence 
+              (without superimposed credits) for the second anime season based on Eiichi Shimizu 
+              and Tomohiro Shimoguchi's Ultraman manga on Thursday. The creator unit NOILION performs the anime's opening theme song "3."</p>
+              <button class="button"> <a href="UltramanNews.html">Read more</a></button>
+          </div>
+        </div>
+
+        <div class="newsArea">
+          <img class="container__image" src="./picture/xxxholic_poster.jpg">
+          <div class="container__text">
+            <h2>Live-Action xxxHOLiC Film's Clip Previews When Watanuki, Yuuko First Meet</h2>
+            <p>The official website for Shochiku and ASMIK Ace's live-action film of CLAMP's xxxHOLiC manga posted a
+               "Sore ga Kono Sekai no Rule" (Those Are the Rules of This World) clip on Thursday.The manga inspired a 
+               stage play adaptation that ran in Tokyo and Kyoto in September and October..</p>
+               <button class="button"> <a href="xxxHOLiCNews.html">Read more</a></button>
+          </div>
+        </div>
+
+        <div class="newsArea">
+          <img src="./picture/Hiroshi Kamiya.jpg">
+          <div class="container__text">
+            <h2>New Urusei Yatsura Anime Casts Maaya Uchida, Mamoru Miyano</h2>
+            <p>The official website for the new television anime of Rumiko Takahashi's 
+              Urusei Yatsura manga posted an updated version of the anime's teaser promotional 
+              video on Thursday. The manga series ran in Shogakukan's Weekly Shonen Sunday magazine 
+              from 1978 to 1987. Viz Media previously released part of the series in English under the titles Lum.</p>
+              <button class="button">Read more</button>
+          </div>
+        </div>
+
+
+        <h5 onclick="ShowMoreFunction()" id="seemore">
+          Show more...
+        </h5>
+
+        <Hidden id="HiddenContent">
+          <div class="newsArea">
+            <img class="container__image" src="./picture/ciryHunter.jpg">
+            <div class="container__text">
+              <h2>City Hunter Series Gets New Anime Film</h2>
+              <p>The official Twitter account for the City Hunter franchise 
+                announced on Friday that the series is getting a new movie to commemorate 
+                the television anime's 35th anniversary. The account began streaming a trailer, 
+                which lists the movie as "coming soon." The video reveals and previews TM Network's 
+                ending theme song "Get Wild," which is the same as the original anime's ending. The video also confirms that Akira Kamiya will return to play Ryo Saeba.</p>
+                <button class="button">Read more</button>
+            </div>
+          </div>
+
+          <div class="newsArea">
+            <img class="container__image" src="./picture/Attack.jpeg">
+            <div class="container__text">
+              <h2>The ANN Aftershow Attack on Titan the Final Season: The Big Finale!</h2>
+              <p>We've reached the end of the road (almost, again)! 
+                Mikasa and Eren reflect back on the path of destruction. 
+                Was there ever a point when Eren could have been saved? 
+                Can the world still be? We've also got the news on anime dub industry's move to 
+                unionize and the brand-new manga coming from the creator of Chainsaw Man</p>
+                <button class="button">Read more</button>
+            </div>
+          </div>
+
+        </Hidden>
+
+
+        <a class="EmailIcon" href="mailto:210339322@stu.vtc.edu.hk"><img src="./picture/Email.png" style="width:80px;height:auto;"></a>
+        <a class="promotionLeft" style="display:inline;" href="https://en.wikipedia.org/wiki/Sword_Art_Online" target="_blank"><img src="./picture/promotionListLeft.jpg" style="width:173px;height:auto;"></a>
+
+
+
+        <footer>
+          &copy; 2022-2023, Anime Fans Club<br>
+          All rights reserved.
+        </footer>
+
+        <script> 
+          // show more detail setting
+          function ShowMoreFunction() {
+              document.getElementById("HiddenContent").style.display = "inline";        
+              document.getElementById("seemore").style.display = "none";
+          }
+          
+          // Slides setting
+          let slideIndex = 0;
+          showSlides();
+          function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("fade");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 4000); // speed setting 
+          }
+        
+        // second menu setting
+        var IsContentHidden = false;
+        function openHiddenMenu(){
+          var divsToHide = document.getElementsByClassName("HiddenMenu");
+            if(IsContentHidden == false){
+              for(var i = 0; i < divsToHide.length; i++)
+                  divsToHide[i].style.display = "block"; 
+                  IsContentHidden = true;
+            }else{
+              for(var i = 0; i < divsToHide.length; i++)
+                  divsToHide[i].style.display = "none"; 
+                  IsContentHidden = false;
+            }
+        }
+        
+        // second menu setting 
+        var IsContentHidden = false;
+        function openHiddenMenu(){
+          var divsToHide = document.getElementsByClassName("HiddenMenu");
+            if(IsContentHidden == false){
+              for(var i = 0; i < divsToHide.length; i++)
+                  divsToHide[i].style.display = "block"; 
+                  IsContentHidden = true;
+            }else{
+              for(var i = 0; i < divsToHide.length; i++)
+                  divsToHide[i].style.display = "none"; 
+                  IsContentHidden = false;
+            }
+        }
+
+        function OpenMenu() {
+          document.getElementById("SecondMenu").style.width = "300px";
+          document.body.style.backgroundColor = "gray";
+        }
+
+        function CloseMenu() {
+          document.getElementById("SecondMenu").style.width = "0";
+          document.body.style.backgroundColor = "white";
+        }
+
+      </script>
+    </div>
+</body>
+</html>

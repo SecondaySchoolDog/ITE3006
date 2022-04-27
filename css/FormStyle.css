@@ -1,0 +1,74 @@
+/* form style */
+    body{
+        background-color: rgba(237,231,246,255);
+    }
+
+  /*red color*/
+  .red {
+    color: rgb(255, 0, 0);
+  }
+  
+  /*normal form setting */
+  .form-style {
+    background-color: white;
+    width: 500px;
+    padding: 40px;
+    margin: 10px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+  
+  /*form background */
+  /*form detaill CSS setting */
+  .detail {
+    border:0.5px solid black;
+    padding-top: 20px;
+    background: #faf6f6;
+    padding: 20px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+  }
+
+  .inputProduct{
+      width: 300px;
+  }
+  
+  #AddItem{
+      cursor: pointer;
+      color: blue;
+      text-decoration:underline;
+      font-size: 12px;
+  }
+
+  .column{
+    margin-top: 20px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+  }
+
+  .calculAmount{
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+
+  .calculAmount{
+      text-align: right;
+  }
+
+  #sumitForm{
+    background-color: rgba(237,231,246,255);
+    border-radius: 12px;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  #sumitForm:hover{
+    background-color: blue;
+    color: white;
+    }
