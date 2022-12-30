@@ -1,5 +1,3 @@
-ITE3006 Information Technology Essentials
-
 # ITE3006 Information Technology Essentials
 
 > ITP114105 Software engineering (Tuen Mun) Year1
